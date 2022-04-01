@@ -15,7 +15,7 @@ func prettyNow() string {
 	minute := now.Minute()
 	second := now.Second()
 
-	return fmt.Sprintf("%2d:%2d:%2d %d/%d/%d", hour, minute, second, day, month, year)
+	return fmt.Sprintf("%02d:%02d:%02d %d/%d/%d", hour, minute, second, day, month, year)
 }
 
 func main() {
