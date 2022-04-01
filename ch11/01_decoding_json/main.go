@@ -6,13 +6,16 @@ import (
 )
 
 type greeting struct {
-	Message string
+	SomeMessage string `json:"message"`
 }
 
 // NOTE: To be able to unmarshal into a struct, the struct field must be
 // exportable. The struct's field name must be capitalized. Only fields that
 // are exportable are visible externally, including the JSON unmarshaler. Only
 // the exported fields will be in the JSON output; other fields are ignored.
+
+// NOTE: Using struct tags gives us more control. We can now name our struct
+// field name anything as long as it is exportable.
 
 func main() {
 	data := []byte(`
@@ -27,5 +30,5 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(v.Message)
+	fmt.Println(v.SomeMessage)
 }
