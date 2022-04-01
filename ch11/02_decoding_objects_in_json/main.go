@@ -48,4 +48,6 @@ func main() {
 
 	fmt.Println(p.Address.State, p.Address.City)
 	fmt.Println(p.Address.Street, p.Address.ZipCode, p.FirstName, p.LastName)
+	fmt.Printf("\n%+v\n", p)
+	fmt.Printf("\n%#v\n", p)
 }
