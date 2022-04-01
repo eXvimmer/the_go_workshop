@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"os"
 )
 
 type greeting struct {
@@ -25,6 +26,11 @@ func main() {
   `)
 
 	var v greeting
+
+	if !json.Valid(data) {
+		fmt.Printf("JSON is not valid: %s\n", data)
+		os.Exit(1)
+	}
 
 	err := json.Unmarshal(data, &v)
 	if err != nil {
