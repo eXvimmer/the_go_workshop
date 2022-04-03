@@ -1,6 +1,9 @@
 package main
 
-import "os"
+import (
+	"io/ioutil"
+	"os"
+)
 
 func main() {
 	f, err := os.Create("output")
@@ -14,4 +17,7 @@ func main() {
 
 	f.Write([]byte("Using the write method.\n"))
 	f.WriteString("Using the WriteString method.\n")
+
+	message := []byte("something!\n")
+	ioutil.WriteFile("somefile.txt", message, 0744)
 }
