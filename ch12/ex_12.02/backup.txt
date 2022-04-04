@@ -1,0 +1,6 @@
+Notes:
+
+1. Master JS/TS
+2. Master Python
+3. Master Go
+4. Master C/C++
