@@ -21,3 +21,6 @@ output
 
 # Go workspace file
 go.work
+
+# environment variables
+.env
