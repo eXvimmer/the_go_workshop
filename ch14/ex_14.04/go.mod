@@ -1,0 +1,3 @@
+module github.com/exvimmer/the_go_workshop/uploading_a_file_to_a_web_server_via_a_web_request
+
+go 1.18
