@@ -1,0 +1,3 @@
+module github.com/exvimmer/the_go_workshop/seding_data_to_a_web_server_and_checking_whether_the_data_was_received_using_post_and_get
+
+go 1.18
