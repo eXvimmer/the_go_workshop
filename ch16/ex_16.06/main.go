@@ -8,7 +8,7 @@ import (
 func push(from, to int, ch chan int) {
 	for i := from; i <= to; i++ {
 		ch <- i
-		time.Sleep(time.Microsecond)
+		time.Sleep(time.Microsecond) // let another routine pick up the work
 	}
 }
 
