@@ -12,8 +12,8 @@ import (
 func ExampleHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	fmt.Fprintf(w, "Hello Packt")
-	return
 }
+
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", ExampleHandler)
